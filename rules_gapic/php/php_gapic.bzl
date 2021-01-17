@@ -59,9 +59,9 @@ def _php_gapic_postprocessed_srcjar_impl(ctx):
 
     script = """
     unzip -q {gapic_srcjar} -d {output_dir_path}
-    {php} {code_fixer} fix --using-cache=false \
+    {php} {code_fixer} --verbose fix --using-cache=false \
         --rules=@Symfony,-phpdoc_annotation_without_dot {output_dir_path} || exit 1
-    {php} {code_fixer} fix --using-cache=false \
+    {php} {code_fixer} --verbose fix --using-cache=false \
         --rules='{{"phpdoc_no_alias_tag":{{"replacements":{{"var":"type"}}}}}}' {output_dir_path}  || exit 1
     {php} {code_sniffer} --standard=PSR2 {output_dir_path}  || exit 1
     pushd {output_dir_path}
