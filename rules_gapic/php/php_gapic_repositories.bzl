@@ -72,13 +72,13 @@ def php_gapic_repositories():
     _maybe(
         http_file,
         name = "php_cs_fixer",
-        urls = ["https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.9.1/php-cs-fixer.phar"],
+        urls = ["https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.17.3/php-cs-fixer.phar"],
     )
 
     _maybe(
         http_file,
         name = "php_code_sniffer",
-        urls = ["https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.4.2/phpcbf.phar"],
+        urls = ["https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.8/phpcbf.phar"],
     )
 
 def _execute_and_check_result(ctx, command, **kwargs):
